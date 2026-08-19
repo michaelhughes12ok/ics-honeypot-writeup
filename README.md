@@ -7,7 +7,7 @@ I was recently given the gift of a decrepit old tower pc. More specifically an H
 * 2 Ethernet cables
 * Power cables for Pi and Pavilion
 # Network Layout
-'''text
+```text
 XB7-T
   │
   │ ethernet
@@ -20,7 +20,7 @@ Pi USB-ethernet adapter  [LAN/honeypot zone]
   │
   │ ethernet
   ▼
-'''
+```
 Honeypot
 # Steps I followed
 1. Install OpenWrt on Pi (Easily configurable firewall)
