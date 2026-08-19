@@ -1,12 +1,12 @@
-#Deploying an ICS honeypot on my home network using TPot
+# Deploying an ICS honeypot on my home network using TPot
 I was recently given the gift of a decrepit old tower pc. More specifically an HP Pavilion 500-424 boasting an AMD A8-6410 quad-coreprocessor(2.0 ghz), integrated AMD Radeon R5 graphics and 8 GB of DDR3 RAM. Thinking of ways I could put this retired piece of machinery to use I thought well obviously with an old tower pc I should try to build a homelab. Long story short I successfully installed proxmox and even got to the webui only to discover the cpu architecture was so old it couldn't run rhel vms. A little frustrated and demoralized I took a step back and thought hard about where I could apply this old computer to do something productive with my summer if it wasnt studying SELinux. Then I came back to the concepts I had just recently covered for my Security+ exam. I thought what if I were to instead of locking down a server unlock a server? And thats when the honeypot ball started rolling. First I researched existing platforms like conpot but didn't have much faith in myself to sort raw logs. So naturally, I landed on Tpot the all in one honeypot.
-#What I used to setup my server (Prerequisites) 
+# What I used to setup my server (Prerequisites) 
 * HP Pavilion 500-424
 * Raspberry Pi 3 Model B
 * Usb to Ethernet Adapter (Pi only has one ethernet port on the board)
 * 2 Ethernet cables
 * Power cables for Pi and Pavilion
-#Network Layout
+# Network Layout
 XB7-T
   │
   │ ethernet
@@ -20,7 +20,7 @@ Pi USB-ethernet adapter  [LAN/honeypot zone]
   │ ethernet
   ▼
 Honeypot
-#Steps I followed
+# Steps I followed
 1. Install OpenWrt on Pi (Easily configurable firewall)
 1. Install Debian Making sure its headless on Pavilion (Conserve resources)
 1. Update Both.
