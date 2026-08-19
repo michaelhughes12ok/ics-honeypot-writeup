@@ -7,6 +7,7 @@ I was recently given the gift of a decrepit old tower pc. More specifically an H
 * 2 Ethernet cables
 * Power cables for Pi and Pavilion
 # Network Layout
+'''text
 XB7-T
   │
   │ ethernet
@@ -19,13 +20,15 @@ Pi USB-ethernet adapter  [LAN/honeypot zone]
   │
   │ ethernet
   ▼
+'''
 Honeypot
 # Steps I followed
 1. Install OpenWrt on Pi (Easily configurable firewall)
-1. Install Debian Making sure its headless on Pavilion (Conserve resources)
+1. Install Debian Making sure its headless on Pavilion (Conserves resources and stability)
 1. Update Both.
 1. Find Drivers for usb to ethernet adapter (turns out there were prereq drivers this took me several hours.)
-1. Install TPot on server and configure .yml file aka docker-compose-custom.yml because of my resource constraint I only enabled conpot and backup services 1. Configure Pi's subnet. Home network operates on 10.0.0.0/24 while the pi is on 10.10.10.0/24 keeping the two from ever being able to interact.
+1. Install TPot on server and configure .yml file aka docker-compose-custom.yml because of my resource constraint I only enabled conpot and backup services 
+1. Configure subnet for honeypot. Home network operates on 10.0.0.0/24 while the honeypot is on 10.10.10.0/24 keeping the two from ever being able to interact.
 1. Start TPot ensure it cant reach home network 
 1. Explicit rule to allow connections on port 64295 (TPot SSH) but only from my home laptop ip ssh into pi then into TPot.
 1. Once everything is running and verified you cant reach the home network from the honeypot expose ports to the internet.
